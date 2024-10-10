@@ -6,19 +6,81 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/tealtopleft"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:background="@color/teal_200"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/view1"
-        />
+        app:layout_constraintBottom_toTopOf="@id/center"
+        app:layout_constraintEnd_toStartOf="@+id/center" />
+
     <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/purple_500"
-        app:layout_constraintTop_toTopOf="@id/view1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/teal_200"
+        android:id="@+id/tealtopright"
+        app:layout_constraintBottom_toTopOf="@id/center"
+        app:layout_constraintLeft_toRightOf="@id/center"
         />
 
+    <View
+        android:id="@+id/purptop"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/purple_500"
+        app:layout_constraintBottom_toTopOf="@id/tealtopright"
+        app:layout_constraintEnd_toStartOf="@id/tealtopright" />
+
+    <View
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/black"
+        android:id="@+id/center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <View
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/teal_200"
+        android:id="@+id/tealbotleft"
+        app:layout_constraintTop_toBottomOf="@id/center"
+        app:layout_constraintEnd_toStartOf="@id/center"
+        />
+    <View
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/teal_200"
+        android:id="@+id/tealbotright"
+        app:layout_constraintStart_toEndOf="@id/center"
+        app:layout_constraintTop_toBottomOf="@id/center"
+        />
+
+    <View
+        android:id="@+id/purpleft"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/purple_500"
+        app:layout_constraintTop_toBottomOf="@id/tealbotleft"
+        app:layout_constraintEnd_toStartOf="@id/tealbotleft" />
+
+    <View
+        android:id="@+id/purpmid"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/purple_500"
+        app:layout_constraintTop_toBottomOf="@id/tealbotleft"
+        app:layout_constraintEnd_toStartOf="@id/tealbotright" />
+
+    <View
+        android:id="@+id/purpright"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/purple_500"
+        app:layout_constraintTop_toBottomOf="@id/tealbotleft"
+        app:layout_constraintStart_toEndOf="@id/tealbotright"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
